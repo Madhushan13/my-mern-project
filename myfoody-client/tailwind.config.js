@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "green": "#39DB4A",
+        "green": "#0cc922",
         "red": "#FF6868",
         "secondary": "#555",
         "primaryBG": "#FCFCFC", // Custom color if needed
@@ -21,10 +21,10 @@ export default {
     themes: [
       {
         mytheme: {
-          // primary: "#39DB4A", // Custom primary color
-          // secondary: "#FF6868", // Custom secondary color
-          // accent: "#FFC107", // Custom accent color
-          // neutral: "#555555", // Custom neutral color
+          primary: "#39DB4A", // Custom primary color
+          secondary: "#FF6868", // Custom secondary color
+          accent: "#FFC107", // Custom accent color
+          neutral: "#555555", // Custom neutral color
           "base-100": "#FFFFFF", // Ensure background is white
           // Add more custom theme properties as needed
         },
