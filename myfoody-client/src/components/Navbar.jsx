@@ -1,7 +1,24 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import logo3 from "/logo3.png";
 import { FiPhoneCall } from "react-icons/fi";
+
 const Navbar = () => {
+  /*Handle scroll function */
+  const [isSticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setSticky(offset > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navItems = (
     <>
       <li>
@@ -44,9 +61,16 @@ const Navbar = () => {
       </li>
     </>
   );
+
   return (
-    <header className="max-w-screen-xl container mx-auto">
-      <div className="navbar xl:px-0">
+    <header className="max-w-screen-2xl container mx-auto fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out">
+      <div
+        className={`navbar xl:px-24 ${
+          isSticky
+            ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

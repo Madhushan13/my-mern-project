@@ -7,3 +7,8 @@ body {
 .section-container {
   @apply max-w-screen-2xl container mx-auto xl:px-11 px-4;
 }
+
+header,
+nav {
+  z-index: 10001 !important;
+}
