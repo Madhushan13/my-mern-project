@@ -10,7 +10,7 @@ const Cards = ({ item }) => {
   };
 
   return (
-    <div className="card card-compact bg-base-100 w-96 shadow-xl">
+    <div className="card shadow-xl relative mx-5 md:my-5">
       <div
         className={`rating gap-1 absolute right-2 top-2 p-4 heartStar bg-green ${
           isHeartFilled ? "text-rose-500" : "text-white"
