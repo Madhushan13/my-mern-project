@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import logo3 from "/logo3.png";
-import { FiPhoneCall } from "react-icons/fi";
+import { FaRegUser } from "react-icons/fa";
+import Model from "./Model";
 
 const Navbar = () => {
   /*Handle scroll function */
@@ -149,11 +150,15 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/*btn */}
-          <a className="btn  bg-green rounded-full px-6 text-white flex items-center gap-2">
-            <FiPhoneCall />
-            Contact
-          </a>
+          {/*Login btn */}
+          <button
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+            className="btn  bg-green rounded-full px-6 text-white flex items-center gap-2"
+          >
+            <FaRegUser />
+            Login
+          </button>
+          <Model />
         </div>
       </div>
     </header>
